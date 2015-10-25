@@ -1,0 +1,23 @@
+{
+  "name": "@brentlintner/vile-tslint",
+  "version": "0.0.1",
+  "description": "A vile plugin for TSLint",
+  "main": "lib/index.js",
+  "scripts": {},
+  "dependencies": {
+    "@brentlintner/vile": "~0.1.7",
+    "bluebird": "2.9.34",
+    "ignore-file": "1.1.2",
+    "lodash": "3.10.1",
+    "tslint": "2.4.2"
+  },
+  "devDependencies": {
+    "coffee-script": "1.9.3",
+    "chai": "3.2.0",
+    "istanbul": "0.3.17",
+    "mimus": "0.1.2",
+    "mocha": "2.2.5",
+    "sinon": "1.15.4",
+    "sinon-chai": "2.8.0"
+  }
+}
