@@ -1,9 +1,17 @@
 vile:
   ignore: [
-      "node_modules",
       ".build",
+      ".ctags",
+      "coverage",
+      ".editorconfig",
+      ".eslintrc",
+      ".eslintignore",
+      ".fs-lint",
+      ".gitignore",
+      "node_modules",
+      "README.md",
       ".test",
-      "coverage"
+      ".vile.yml"
     ]
 
 length:
