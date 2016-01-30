@@ -1,6 +1,6 @@
 {
   "name": "@brentlintner/vile-tslint",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "description": "A vile plugin for TSLint",
   "main": "lib/index.js",
   "scripts": {},
