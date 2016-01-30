@@ -12,23 +12,28 @@ A [vile](http://vile.io) plugin for running [tslint](http://palantir.github.io/t
     npm i vile-tslint
     vile -p
 
+## Config
+
+Currently, config is read from a `tslint` config file.
+
+By default, `/tslint.json` in the `cwd` is used if nothing is specified.
+
+You can specify a custom path like so:
+
+```yml
+tslint:
+  config: some_custom_file.json
+```
+
 ## Ignoring Files
 
-If you have a `.tslintignore` file in your root, and you have
-this in your `.vile.yml`:
+You can specify `tslint` specific ignores:
 
 ```yml
 tslint:
   config: tslint.json
-  ignore: .tslintignore
+  ignore: [ "dir/**/*", "file.ts" ]
 ```
-
-### .tslintignore
-
-This is a file specific to `vile-tslint` itself.
-
-It is more or less like a `.gitignore` file, and uses
-[ignore-file](https://github.com/mafintosh/ignore-file) for matching.
 
 ## Hacking
 
