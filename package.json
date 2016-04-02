@@ -9,10 +9,10 @@
     "README.md"
   ],
   "dependencies": {
-    "@forthright/vile": "^0.5.14",
-    "bluebird": "^3.3.0",
-    "lodash": "^3.10.1",
-    "tslint": "^3.3.0"
+    "@forthright/vile": "^0.6.0",
+    "bluebird": "^3.3.4",
+    "lodash": "^4.7.0",
+    "tslint": "^3.6.0"
   },
   "devDependencies": {
     "chai": "^3.5.0",
