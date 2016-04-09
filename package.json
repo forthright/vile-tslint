@@ -9,16 +9,16 @@
     "README.md"
   ],
   "dependencies": {
-    "@forthright/vile": "^0.6.0",
+    "@forthright/vile": "^0.7.0",
     "bluebird": "^3.3.4",
-    "lodash": "^4.7.0",
-    "tslint": "^3.6.0"
+    "lodash": "^4.9.0",
+    "tslint": "^3.7.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "coffee-script": "^1.10.0",
-    "istanbul": "^0.4.2",
-    "mimus": "^0.1.2",
+    "istanbul": "^0.4.3",
+    "mimus": "^0.2.1",
     "mocha": "^2.4.5",
     "release-it": "^2.3.1",
     "sinon": "^1.17.3",
