@@ -9,7 +9,6 @@
     "README.md"
   ],
   "dependencies": {
-    "@forthright/vile": "^0.7.0",
     "bluebird": "^3.3.4",
     "lodash": "^4.9.0",
     "tslint": "^3.7.1"
@@ -23,5 +22,8 @@
     "release-it": "^2.3.1",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0"
+  },
+  "peerDependencies": {
+    "@forthright/vile": ">= 0.7.0"
   }
 }
