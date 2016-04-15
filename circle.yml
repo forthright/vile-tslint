@@ -1,0 +1,13 @@
+machine:
+  node:
+    version: 5.10.1
+
+dependencies:
+  post:
+    - npm run compile-dev
+
+test:
+  override:
+    - npm run test-cov
+  post:
+    - npm run vile
