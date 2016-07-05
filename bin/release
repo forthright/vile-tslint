@@ -5,4 +5,4 @@ if [ -z "${level}" ]; then
   level=patch
 fi
 
-release-it -n -p -i $level -m "v%s"
+npm run release-it -- -n -p -i $level -m "v%s"
