@@ -5,3 +5,5 @@ mimus = require "mimus"
 sinon = require "sinon"
 chai = require "chai"
 expect = chai.expect
+
+# TODO write tests

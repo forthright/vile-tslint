@@ -11,18 +11,18 @@ A [vile](https://vile.io) plugin for running [tslint](https://palantir.github.io
 
 ## Installation
 
-    npm i vile-tslint
-    vile -p
+    npm i vile --save-dev
+    npm i vile-tslint --save-dev
 
 ## Config
 
 Currently, config is read from a `tslint` config file.
 
-By default, `/tslint.json` in the `cwd` is used if nothing is specified.
+By default, `tslint.json` in the `cwd` is used if nothing is specified.
 
 You can specify a custom path like so:
 
-```yml
+```yaml
 tslint:
   config: some_custom_file.json
 ```
@@ -31,14 +31,32 @@ tslint:
 
 You can specify `tslint` specific ignores:
 
-```yml
+```yaml
 tslint:
-  config: tslint.json
-  ignore: [ "dir/**/*", "file.ts" ]
+  ignore:
+    - dir/**/*
+    - file.ts
 ```
+
+## Allowing Files
+
+You can set `vile.allow` or `tslint.allow`:
+
+Example:
+
+```yaml
+tslint:
+  allow:
+    - src
+```
+## Architecture
+
+This project is currently written in JavaScript.
+
+- `bin` any shell based scripts
+- `lib` javascript lib
 
 ## Hacking
 
     cd vile-tslint
     npm install
-    npm test
