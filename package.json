@@ -17,18 +17,18 @@
     "README.md"
   ],
   "dependencies": {
-    "bluebird": "^3.4.1",
-    "lodash": "^4.13.1",
-    "tslint": "^3.13.0"
+    "bluebird": "^3.4.3",
+    "lodash": "^4.15.0",
+    "tslint": "^3.15.1"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.9.5",
-    "@forthright/vile-coffeelint": ">=0.1.12",
+    "@forthright/vile": ">=0.10.0",
+    "@forthright/vile-coffeelint": ">=0.1.13",
     "@forthright/vile-comment": ">=0.1.16",
     "@forthright/vile-coverage": ">=0.2.13",
     "@forthright/vile-depcheck": ">=0.1.11",
     "@forthright/vile-eclint": ">=0.1.9",
-    "@forthright/vile-eslint": ">=0.1.11",
+    "@forthright/vile-eslint": ">=0.1.12",
     "@forthright/vile-git": "^0.4.2",
     "@forthright/vile-jshint": ">=0.2.11",
     "@forthright/vile-language": ">=0.1.11",
@@ -40,15 +40,15 @@
     "chai-as-promised": "~5.3.0",
     "coffee-script": "~1.10.0",
     "constable": "~0.0.4",
-    "istanbul": "~0.4.4",
+    "istanbul": "~0.4.5",
     "mimus": "~0.2.2",
-    "mocha": "~2.5.3",
-    "npm-check-updates": ">=2.7.0",
-    "release-it": "^2.4.0",
-    "sinon": "~1.17.4",
+    "mocha": "~3.0.2",
+    "npm-check-updates": ">=2.8.0",
+    "release-it": "^2.4.3",
+    "sinon": "~1.17.5",
     "sinon-chai": "~2.8.0"
   },
   "peerDependencies": {
-    "@forthright/vile": ">=0.9.5"
+    "@forthright/vile": ">=0.10.0"
   }
 }
