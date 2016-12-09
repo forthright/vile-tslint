@@ -52,7 +52,6 @@
     "chai": "~3.5.0",
     "chai-as-promised": "~6.0.0",
     "coffee-script": "~1.12.1",
-    "constable": "~0.0.4",
     "istanbul": "~0.4.5",
     "mimus": "~0.2.3",
     "mocha": "~3.2.0",

@@ -40,6 +40,7 @@ depcheck:
       - coverage
       - tmp
     ignore_deps:
+      - bluebird
       - mocha
       - babel-cli
       - coffee-script
