@@ -51,14 +51,28 @@ depcheck:
       - shelljs
       - "@forthright/*"
 
+escomplex:
+  ignore:
+    - src
+
 length:
+  ignore:
+    - lib
   config:
     file: 120
     line: 80
 
+eslint:
+  ignore:
+    - lib
+
 coverage:
   config:
     path: coverage/lcov.info
+
+comment:
+  ignore:
+    - lib
 
 license:
   config:

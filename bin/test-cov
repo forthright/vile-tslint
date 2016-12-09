@@ -1,21 +1,20 @@
-#!/usr/bin/env sh
-export npm_config_coverage=1
-rm -r coverage
-mkdir coverage
-istanbul test --print none --dir coverage/non-system bin/test
-status=$?
+#!/usr/bin/env node
+require("shelljs/global")
 
-if [ "$status" -gt 0 ]; then
-  echo "test run returned $status!"
-  exit 1
-fi
+process.env["npm_config_coverage"] = "1"
 
-echo "generating cov reports.."
-istanbul report | grep -vi "done"
-istanbul report text-summary | grep -vi "done"
-istanbul report json | grep -vi "done"
-istanbul check-coverage coverage/coverage-final.json \
-  --statements 98 \
-  --functions 98 \
-  --branches 98 \
-  --lines 98
+rm("-r", "coverage")
+
+mkdir("coverage")
+
+exec(
+  "istanbul test --dir coverage _mocha " +
+  "-- --recursive -u bdd -R spec -t 2000 .test/spec.js",
+  function(code) {
+    if (code !== 0) exit(code)
+    exec(
+      "npm run lint-cov",
+      function(code) {
+        if (code !== 0) exit(code)
+      })
+  })
