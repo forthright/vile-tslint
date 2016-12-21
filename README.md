@@ -1,6 +1,6 @@
 # vile-tslint [![Circle CI](https://circleci.com/gh/forthright/vile-tslint.svg?style=svg&circle-token=b2617bd7552a6158b6a8267fb454f8dfea0b9e50)](https://circleci.com/gh/forthright/vile-tslint)
 
-[![score-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/score?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~brentlintner/vile-tslint) [![security-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/security?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint) [![coverage-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/coverage?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint) [![dependency-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/dependency?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint)
+[![score-badge](https://vile.io/api/v0/projects/vile-tslint/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-tslint) [![security-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/security?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint) [![coverage-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/coverage?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint) [![dependency-badge](https://vile.io/api/v0/users/brentlintner/vile-tslint/badges/dependency?token=uFywUmzZfbg6UboLzn6R)](https://vile.io/~/brentlintner/vile-tslint)
 
 A [vile](https://vile.io) plugin for running [tslint](https://palantir.github.io/tslint).
 
