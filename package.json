@@ -33,7 +33,7 @@
     "tslint": "^4.4.2"
   },
   "devDependencies": {
-    "@forthright/vile": ">=0.11.5",
+    "@forthright/vile": ">=0.11.8",
     "@forthright/vile-coffeelint": ">=0.1.14",
     "@forthright/vile-comment": ">=0.1.17",
     "@forthright/vile-coverage": ">=0.2.14",
@@ -64,6 +64,6 @@
     "typescript": "^2.1.5"
   },
   "peerDependencies": {
-    "@forthright/vile": ">=0.11.5"
+    "@forthright/vile": ">=0.11.8"
   }
 }
