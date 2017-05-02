@@ -1,13 +1,11 @@
 path = require "path"
 _ = require "lodash"
-sinon_chai = require "./helpers/sinon_chai"
-mimus = require "mimus"
 sinon = require "sinon"
-chai = require "chai"
+chai = require "./helpers/sinon_chai"
+mimus = require "mimus"
+vile = require "vile"
 expect = chai.expect
-lib = mimus.require "../lib/index", __dirname, [ "vile" ]
-
-vile = mimus.get lib, "vile"
+lib = mimus.require "../lib/index", __dirname
 
 system_test_dir = path.resolve(
   path.join __dirname, "..", "test", "fixtures")
