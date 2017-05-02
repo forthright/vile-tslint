@@ -1,6 +1,6 @@
 // TODO: handle when no rules present
 
-const vile = require("@forthright/vile")
+const vile = require("vile")
 const _ = require("lodash")
 const path = require("path")
 const TSLint = require("tslint").Linter
