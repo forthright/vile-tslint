@@ -13,11 +13,10 @@ A [vile](https://vile.io) plugin for [tslint](https://palantir.github.io/tslint)
 
 ## Config
 
-Currently, config is read from a `tslint` config file.
+Currently, config is read from any `tslint` config file picked up via
+`tslint.Configuration.findConfiguration`.
 
-By default, `tslint.json` in the `cwd` is used if nothing is specified.
-
-You can specify a custom path like so:
+You can specify a custom config file path in your `.vile.yml`:
 
 ```yaml
 tslint:

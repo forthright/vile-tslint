@@ -2,26 +2,14 @@ path = require "path"
 _ = require "lodash"
 sinon = require "sinon"
 chai = require "./helpers/sinon_chai"
+system = require "./helpers/system"
 mimus = require "mimus"
 vile = require "vile"
 expect = chai.expect
 lib = mimus.require "../lib/index", __dirname
 
-system_test_dir = path.resolve(
-  path.join __dirname, "..", "test", "fixtures")
-
-change_into_system_test_dir_on_each = ->
-  cwd = undefined
-
-  beforeEach ->
-    cwd = process.cwd()
-    process.chdir system_test_dir
-
-  afterEach ->
-    process.chdir cwd
-
 describe "vile-tslint", ->
-  change_into_system_test_dir_on_each()
+  system.change_into_system_test_dir_on_each()
 
   describe "punish", ->
     describe "allow", ->
@@ -125,18 +113,3 @@ describe "vile-tslint", ->
             }
           }
         ]
-
-    describe "when no tsconfig file is found", ->
-      it "logs a warning to stderr", (done) ->
-        mimus.stub console, "warn"
-
-        config = config: "tslint-unknown.json"
-
-        lib.punish(config).should.be.fulfilled.notify ->
-          process.nextTick ->
-            expect(console.warn).to.have.been
-              .calledWith "could not find tslint-unknown.json"
-            console.warn.restore()
-            done()
-
-        return

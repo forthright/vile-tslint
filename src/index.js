@@ -1,27 +1,24 @@
-// TODO: handle when no rules present
-
 const vile = require("vile")
 const _ = require("lodash")
-const path = require("path")
-const TSLint = require("tslint").Linter
+const tslint = require("tslint")
+const TSLint = tslint.Linter
+const Configuration = tslint.Configuration
 
 const IS_TS = /\.ts$/
-
-const tslint_config = (config_path) => {
-  if (!config_path) config_path = "tslint.json"
-  try {
-    return require(path.join(process.cwd(), config_path))
-  } catch(e) {
-    console.warn("could not find " + config_path)
-  }
-}
 
 const is_ts_file = (target, is_dir) =>
   is_dir || IS_TS.test(target)
 
-const lint = (filepath, fileData, config) => {
+const tslint_config = (tslint_config_path, filepath) =>
+  Configuration.findConfiguration(
+    tslint_config_path,
+    filepath
+  ).results
+
+const lint = (filepath, filedata, tslint_config_path) => {
   let linter = new TSLint({ formatter: "json" })
-  linter.lint(filepath, fileData, config)
+  let conf = tslint_config(tslint_config_path, filepath)
+  linter.lint(filepath, filedata, conf)
   return linter.getResult()
 }
 
@@ -31,9 +28,9 @@ const allowed = (ignore, allow) => {
     filtered(target) && is_ts_file(target, is_dir)
 }
 
-const into_issues = (config) =>
+const into_issues = (tslint_config_path) =>
   (filepath, data) => {
-    let results = lint(filepath, data, config)
+    let results = lint(filepath, data, tslint_config_path)
     let errors = _.attempt(
           JSON.parse.bind(null, results.output))
 
@@ -52,17 +49,14 @@ const into_issues = (config) =>
     )
   }
 
-const punish = (user_config) => {
-  let config = _.get(user_config, "config")
-  let ignore = _.get(user_config, "ignore")
-  let allow = _.get(user_config, "allow")
-  let parsed_config = tslint_config(config)
-
-  return vile.promise_each(
+const punish = (user_config) =>
+  vile.promise_each(
     process.cwd(),
-    allowed(ignore, allow),
-    into_issues(parsed_config))
-}
+    allowed(
+      _.get(user_config, "ignore"),
+      _.get(user_config, "allow")
+    ),
+    into_issues(_.get(user_config, "config")))
 
 module.exports = {
   punish: punish
