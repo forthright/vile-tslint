@@ -18,40 +18,34 @@ describe "vile-tslint", ->
 
         lib.punish(config).should.become [
           {
-            "message": "Exceeds maximum line length of 50"
+            "message": "Exceeds maximum line length of 50 [max-line-length]"
             "path": "src/a.ts"
             "signature": "tslint::max-line-length"
-            "title": "max-line-length"
             "type": "style"
             "where": {
               "end": {
                 "character": 74
-                "line": 0
-                "position": 74
+                "line": 1
               }
               "start": {
                 "character": 0
-                "line": 0
-                "position": 0
+                "line": 1
               }
             }
           }
           {
-            "message": "Missing semicolon"
+            "message": "Missing semicolon [semicolon]"
             "path": "src/a.ts"
             "signature": "tslint::semicolon"
-            "title": "semicolon"
             "type": "style"
             "where": {
               "end": {
                 "character": 74
-                "line": 0
-                "position": 74
+                "line": 1
               }
               "start": {
                 "character": 74
-                "line": 0
-                "position": 74
+                "line": 1
               }
             }
           }
@@ -68,21 +62,18 @@ describe "vile-tslint", ->
 
         lib.punish(config).should.become [
           {
-            "message": "Missing semicolon"
+            "message": "Missing semicolon [semicolon]"
             "path": "b.ts"
             "signature": "tslint::semicolon"
-            "title": "semicolon"
             "type": "style"
             "where": {
               "end": {
                 "character": 9
-                "line": 1
-                "position": 10
+                "line": 2
               }
               "start": {
                 "character": 9
-                "line": 1
-                "position": 10
+                "line": 2
               }
             }
           }
@@ -94,21 +85,18 @@ describe "vile-tslint", ->
 
         lib.punish(config).should.become [
           {
-            "message": "Exceeds maximum line length of 50"
+            "message": "Exceeds maximum line length of 50 [max-line-length]"
             "path": "src/a.ts"
             "signature": "tslint::max-line-length"
-            "title": "max-line-length"
             "type": "style"
             "where": {
               "end": {
                 "character": 74
-                "line": 0
-                "position": 74
+                "line": 1
               }
               "start": {
                 "character": 0
-                "line": 0
-                "position": 0
+                "line": 1
               }
             }
           }

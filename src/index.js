@@ -28,6 +28,12 @@ const allowed = (ignore, allow) => {
     filtered(target) && is_ts_file(target, is_dir)
 }
 
+const line_info = (tslint_result_position) => {
+  const line = _.get(tslint_result_position, "line", 0) + 1
+  const character = _.get(tslint_result_position, "character")
+  return { line: line, character: character }
+}
+
 const into_issues = (tslint_config_path) =>
   (filepath, data) => {
     let results = lint(filepath, data, tslint_config_path)
@@ -38,12 +44,11 @@ const into_issues = (tslint_config_path) =>
       vile.issue({
         type: vile.STYL,
         path: result.name,
-        title: result.ruleName,
-        message: result.failure,
+        message: `${result.failure} [${result.ruleName}]`,
         signature: "tslint::" + result.ruleName,
         where: {
-          start: result.startPosition,
-          end: result.endPosition
+          start: line_info(result.startPosition),
+          end: line_info(result.endPosition)
         }
       })
     )
