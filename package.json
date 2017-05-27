@@ -39,7 +39,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "lodash": "^4.17.4",
-    "tslint": "^5.2.0"
+    "tslint": "^5.3.2"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
@@ -49,13 +49,13 @@
     "coffee-script": "^1.12.6",
     "istanbul": "^0.4.5",
     "mimus": "^0.2.5",
-    "mocha": "^3.4.1",
-    "npm-check-updates": "^2.11.1",
+    "mocha": "^3.4.2",
+    "npm-check-updates": "^2.11.2",
     "release-it": "^2.7.3",
     "shelljs": "^0.7.7",
-    "sinon": "^2.2.0",
+    "sinon": "^2.3.2",
     "sinon-chai": "^2.10.0",
-    "typescript": "^2.3.2",
+    "typescript": "^2.3.3",
     "vile": "^0.15.0",
     "vile-coffeelint": "^0.1.16",
     "vile-comment": "^0.1.18",
