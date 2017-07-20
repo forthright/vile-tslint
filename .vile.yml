@@ -1,35 +1,23 @@
 vile:
   ignore:
-    - LICENSE
-    - appveyor.yml
+    - ".*"
+    - bin
     - coverage
-    - coffeelint.json
-    - .ackrc
-    - .babelrc
-    - .build
-    - .npmignore
-    - .travis.yml
-    - .vim.custom
+    - doc
+    - "*.json"
+    - lib
+    - LICENSE
+    - "*.lock"
+    - "*.log"
+    - "*.md"
     - node_modules
+    - src/@types
     - tags
-    - .test
-    - .ctags
-    - .git
-    - circle.yml
-    - .editorconfig
-    - .eslintignore
-    - .eslintrc
-    - .gitignore
-    - .npmrc
-    - tags
+    - test/fixtures
+    - test/mocha.opts
     - tmp
-    - tsconfig.json
-    - tslint.json
-    - tsd.json
     - vendor
-    - README.md
-    - typings
-    - .vile.yml
+    - "*.yml"
 
 depcheck:
   config:
@@ -53,20 +41,6 @@ depcheck:
       - shelljs
       - "vile-**"
 
-escomplex:
-  config:
-    use_maintainability_index: false
-  ignore:
-    - src
-
-eslint:
-  ignore:
-    - lib
-
 coverage:
   config:
     path: coverage/lcov.info
-
-comment:
-  ignore:
-    - lib
