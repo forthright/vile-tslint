@@ -1,6 +1,6 @@
 {
   "name": "vile-tslint",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Identify errors and common style/maintainability issues in your TypeScript code.",
   "main": "lib/index.js",
   "files": [
