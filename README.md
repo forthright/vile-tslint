@@ -1,11 +1,11 @@
 # vile-tslint [![Circle CI](https://circleci.com/gh/forthright/vile-tslint.svg?style=shield&circle-token=b2617bd7552a6158b6a8267fb454f8dfea0b9e50)](https://circleci.com/gh/forthright/vile-tslint) [![score-badge](https://vile.io/api/v0/projects/vile-tslint/badges/score?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-tslint) [![security-badge](https://vile.io/api/v0/projects/vile-tslint/badges/security?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-tslint) [![coverage-badge](https://vile.io/api/v0/projects/vile-tslint/badges/coverage?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-tslint) [![dependency-badge](https://vile.io/api/v0/projects/vile-tslint/badges/dependency?token=USryyHar5xQs7cBjNUdZ)](https://vile.io/~brentlintner/vile-tslint) [![npm version](https://badge.fury.io/js/vile-tslint.svg)](https://badge.fury.io/js/vile-tslint)
 
-A [vile](https://vile.io) plugin for [tslint](https://palantir.github.io/tslint).
+A [Vile](https://vile.io) plugin for identifying errors and common style/maintainability
+issues in your TypeScript code (via [TSLint](https://palantir.github.io/tslint)).
 
 ## Requirements
 
-- [nodejs](http://nodejs.org)
-- [npm](http://npmjs.org)
+- [Node.js](http://nodejs.org)
 
 ## Installation
 
@@ -47,7 +47,7 @@ tslint:
 ```
 ## Versioning
 
-This project ascribes to [semantic versioning](http://semver.org).
+This project uses [Semver](http://semver.org).
 
 ## Licensing
 
@@ -74,8 +74,6 @@ Even if you are uncomfortable with code, an issue or question is welcome.
 
 ### Code Of Conduct
 
-This project ascribes to [contributor-covenant.org](http://contributor-covenant.org).
-
 By participating in this project you agree to our [Code of Conduct](CODE_OF_CONDUCT.md).
 
 ### Maintainers
@@ -90,7 +88,7 @@ This project is currently written in JavaScript.
 - `src` source code
 - `lib` transpiled lib
 
-## Hacking
+## Developing
 
     cd vile-tslint
     npm install

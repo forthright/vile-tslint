@@ -1,7 +1,7 @@
 {
   "name": "vile-tslint",
   "version": "0.3.3",
-  "description": "A vile plugin for TSLint",
+  "description": "Identify errors and common style/maintainability issues in your TypeScript code.",
   "main": "lib/index.js",
   "files": [
     "lib",
