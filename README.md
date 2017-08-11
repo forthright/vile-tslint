@@ -11,6 +11,16 @@ issues in your TypeScript code (via [TSLint](https://palantir.github.io/tslint))
 
     npm i -D vile vile-tslint
 
+## Usage
+
+*configure TSLint*
+
+    npx tslint --init
+
+*run the plugin*
+
+    npx vile a -p tslint
+
 ## Config
 
 Currently, config is read from any `tslint` config file picked up via
