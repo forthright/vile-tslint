@@ -21,7 +21,7 @@ describe "vile-tslint", ->
             "message": "Exceeds maximum line length of 50 [max-line-length]"
             "path": "src/a.ts"
             "signature": "tslint::max-line-length"
-            "type": "style"
+            "type": "maintainability"
             "where": {
               "end": {
                 "character": 74
@@ -37,7 +37,7 @@ describe "vile-tslint", ->
             "message": "Missing semicolon [semicolon]"
             "path": "src/a.ts"
             "signature": "tslint::semicolon"
-            "type": "style"
+            "type": "maintainability"
             "where": {
               "end": {
                 "character": 74
@@ -65,7 +65,7 @@ describe "vile-tslint", ->
             "message": "Missing semicolon [semicolon]"
             "path": "b.ts"
             "signature": "tslint::semicolon"
-            "type": "style"
+            "type": "maintainability"
             "where": {
               "end": {
                 "character": 9
@@ -88,7 +88,7 @@ describe "vile-tslint", ->
             "message": "Exceeds maximum line length of 50 [max-line-length]"
             "path": "src/a.ts"
             "signature": "tslint::max-line-length"
-            "type": "style"
+            "type": "maintainability"
             "where": {
               "end": {
                 "character": 74

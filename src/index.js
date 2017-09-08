@@ -42,7 +42,7 @@ const into_issues = (tslint_config_path) =>
 
     return _.map(errors, (result) =>
       vile.issue({
-        type: vile.STYL,
+        type: vile.MAIN,
         path: result.name,
         message: `${result.failure} [${result.ruleName}]`,
         signature: "tslint::" + result.ruleName,
